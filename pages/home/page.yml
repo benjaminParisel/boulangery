@@ -23,4 +23,5 @@ slots:
           - id: '2'
             name: content
             bindings: {}
-            children: []
+            children:
+              - components/table.yml
