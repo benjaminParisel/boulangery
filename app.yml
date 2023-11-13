@@ -1,0 +1,12 @@
+storeItemList: []
+metadata:
+  favicon: ''
+  code: ''
+  title: TotoNew app
+  description: ''
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+internalType: project
