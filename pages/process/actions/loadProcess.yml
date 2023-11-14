@@ -1,0 +1,141 @@
+id: '16998882546270.7716930193222089'
+kind: workflow
+name: loadProcess
+nameConfigured: true
+steps:
+  - id: '16999664626160.4934120905353685'
+    type: httpRequest
+    name: login
+    params:
+      - type: datasourceId
+        value: bonitaDocker
+        valueType: custom
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /bonita/loginservice?redirect=false
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          - name: Content-Type
+            value: application/x-www-form-urlencoded
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value:
+          - name: username
+            value: '{{state.username}}'
+            type: text
+          - name: password
+            value: '{{state.password}}'
+            type: text
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: formUrlEncoded
+        valueType: string
+      - type: successMapper
+        value: '{{res.headers}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+    paused: true
+  - id: '16999664818990.0025999202633884'
+    type: httpRequest
+    name: loadProcess
+    params:
+      - type: datasourceId
+        value: bonitaDocker
+        valueType: custom
+        mustSelectFirst: true
+      - type: method
+        value: GET
+        valueType: string
+      - type: url
+        value: /bonita/API/bpm/process?p=0&c=10
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          - name: X-Bonita-API-Token
+            value: '{{}}'
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          - name: p
+            value: '0'
+          - name: c
+            value: '20'
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: raw
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+    nameConfigured: true
+mode: auto
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.loadProcess.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadProcess.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.loadProcess.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 1

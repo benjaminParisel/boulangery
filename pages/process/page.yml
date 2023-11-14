@@ -1,6 +1,8 @@
 id: '1'
-name: Home
-url: home
+name: Process
+url: process
+roleIds: []
+disableInMenu: false
 index: 0
 slots:
   - id: '1'
@@ -18,10 +20,15 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-        actions: {}
+        actions:
+          pageLoad:
+            - action: '16999722125390.6870857000493533'
+              paramCode: ''
+              blockPageLoad: false
+              index: 0
         slots:
           - id: '2'
             name: content
             bindings: {}
             children:
-              - components/table.yml
+              - components/bonitaTable.yml
