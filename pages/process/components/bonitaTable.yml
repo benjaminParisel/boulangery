@@ -81,7 +81,22 @@ properties:
   showFilter: false
   putEmptyValuesAtTheEnd: true
   serverSidePagination: false
-actions: {}
+actions:
+  init:
+    - action: '16998882546270.7716930193222089'
+      paramCode: ''
+      blockPageLoad: false
+      index: 0
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  smartTableReload: []
 slots:
   - id: '16998722269730.15306551111263378'
     name: columns
