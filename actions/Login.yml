@@ -1,0 +1,105 @@
+id: '16999722125390.6870857000493533'
+kind: workflow
+name: Login
+nameConfigured: true
+steps:
+  - id: '16999722157810.7507783476467886'
+    type: httpRequest
+    name: login
+    params:
+      - type: datasourceId
+        value: bonitaDocker
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: POST
+        valueType: string
+      - type: url
+        value: /bonita/loginservice?redirect=false
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          - name: Content-Type
+            value: application/x-www-form-urlencoded
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          - name: username
+            value: walter.bates
+          - name: password
+            value: bpm
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value:
+          - name: username
+            value: walter.bates
+            type: text
+          - name: password
+            value: bpm
+            type: text
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: formUrlEncoded
+        valueType: string
+      - type: successMapper
+        value: return {{}}
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+    paused: false
+  - id: '16999727495920.14444139174209703'
+    type: putInLocalStorage
+    name: save2
+    params:
+      - type: name
+        value: bonitaSession
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: true
+mode: auto
+modeConfigured: true
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Login.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Login.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Login.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: true
+selected: true
+configured: true
+index: 0

@@ -1,4 +1,35 @@
-storeItemList: []
+storeItemList:
+  - id: '16999723563320.35254777452403596'
+    name: cookies
+    value: ''
+    valueType: string
+    initialValue: ''
+    version: 1
+  - id: '16999733932500.19018350852926602'
+    name: username
+    value: walter.bates
+    valueType: string
+    initialValue: walter.bates
+    version: 1
+  - id: '16999734038440.2303702365317155'
+    name: password
+    value: bpm
+    valueType: string
+    initialValue: bpm
+    version: 1
+  - id: '16999746473900.5958748067947868'
+    name: processData
+    value: {}
+    valueType: object
+    initialValue: {}
+    version: 1
+    parentPageId: '16999695052200.8058809131661584'
+  - id: '17000376171750.7741947193925942'
+    name: port
+    value: '9090'
+    valueType: string
+    initialValue: '9090'
+    version: 1
 metadata:
   favicon: ''
   code: ''

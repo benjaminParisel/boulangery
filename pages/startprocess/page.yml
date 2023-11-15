@@ -1,0 +1,28 @@
+id: '16999695052200.8058809131661584'
+name: startProcess
+url: startprocess
+roleIds: []
+disableInMenu: true
+parentPageId: null
+index: 1
+slots:
+  - id: '16999695052200.5154544753080497'
+    name: content
+    children:
+      - id: '16999695052200.07624495181835056'
+        definitionId: grid
+        parentSlotId: '16999695052200.5154544753080497'
+        styles: {}
+        properties:
+          name: startprocess
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '16999695052200.2006754941794333'
+            name: content
+            children:
+              - components/iframe.yml
+              - components/heading.yml

@@ -1,0 +1,25 @@
+id: '16999701851230.032985911143490476'
+definitionId: heading
+parentSlotId: '16999695052200.2006754941794333'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 1
+      w: 24
+      h: 10
+  xs:
+    gridItem:
+      x: 0
+      y: 60
+      w: 24
+      h: 10
+properties:
+  name: heading
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: '{{actions.requestBonita.data.name}}'
+  alignment: center
+actions: {}
+slots: []

@@ -1,0 +1,75 @@
+id: '16999721752460.6722030986160183'
+kind: workflow
+name: requestBonita
+nameConfigured: true
+steps:
+  - id: '16999721848510.5308284030629684'
+    type: httpRequest
+    name: request
+    params:
+      - type: datasourceId
+        value: bonitaDocker
+        valueType: string
+        mustSelectFirst: true
+      - type: method
+        value: GET
+        valueType: string
+      - type: url
+        value: /bonita/API/bpm/process/{{activeRoute.queryParams.id}}
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: headers
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+        interpolationType: string
+      - type: queryParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+        interpolationType: string
+      - type: body
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: structuredBody
+        value: []
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: bodyType
+        value: raw
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: auto
+modeConfigured: true
+parentPageId: '16999695052200.8058809131661584'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.requestBonita.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.requestBonita.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.requestBonita.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+index: 2
