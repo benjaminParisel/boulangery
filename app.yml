@@ -24,6 +24,12 @@ storeItemList:
     initialValue: {}
     version: 1
     parentPageId: '16999695052200.8058809131661584'
+  - id: '17000376171750.7741947193925942'
+    name: port
+    value: '9090'
+    valueType: string
+    initialValue: '9090'
+    version: 1
 metadata:
   favicon: ''
   code: ''

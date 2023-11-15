@@ -20,7 +20,7 @@ properties:
     - xl
     - xs
   url: >-
-    http://localhost:20536/bonita/portal/resource/process/{{actions.requestBonita.data.name}}/{{actions.requestBonita.data.version}}/content/?id={{actions.requestBonita.data.id}}&autoInstantiate=false
+    http://localhost:{{state.port}}/bonita/portal/resource/process/{{actions.requestBonita.data.name}}/{{actions.requestBonita.data.version}}/content/?id={{actions.requestBonita.data.id}}&autoInstantiate=false
   __UIBAKERY__SHOW__CONDITION__PRESERVE__:
     value: false
     dataValue: 'false'
