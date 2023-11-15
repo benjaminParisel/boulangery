@@ -1,0 +1,46 @@
+id: '17000413294870.7265259735345149'
+kind: workflow
+name: iframeListener
+nameConfigured: true
+steps:
+  - id: '17000413325290.9618493755778179'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: >-
+          const iframe = document.querySelector('.iframe >
+          iframe').contentWindow;
+
+          iframe.on('message', (data) => {
+            console.log(data);
+          });
+
+
+          return {{data}};
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '16999695052200.8058809131661584'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.iframeListener.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.iframeListener.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.iframeListener.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true
+index: 3

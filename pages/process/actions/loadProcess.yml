@@ -80,8 +80,8 @@ steps:
         interpolationType: string
       - type: headers
         value:
-          - name: X-Bonita-API-Token
-            value: '{{}}'
+          - name: ''
+            value: ''
         valueType: custom
         interpolationType: string
       - type: queryParams

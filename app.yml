@@ -38,6 +38,12 @@ metadata:
 appSettings:
   properties:
     defaultData: '{}'
-  actions: {}
+  actions:
+    appLoad:
+      - action: '16999722125390.6870857000493533'
+        paramCode: ''
+        blockPageLoad: false
+        index: 0
+    appData: []
   gridVersion: 2
 internalType: project
